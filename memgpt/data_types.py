@@ -5,7 +5,7 @@ import json
 import uuid
 import warnings
 from datetime import datetime, timezone
-from typing import Dict, List, Optional, TypeVar
+from typing import Dict, List, Optional, TypeVar, Any
 
 import numpy as np
 from pydantic import BaseModel, Field
