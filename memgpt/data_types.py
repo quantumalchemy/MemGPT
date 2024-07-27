@@ -71,7 +71,6 @@ class ToolCall(object):
             "function": self.function,
         }
 
-
 def add_inner_thoughts_to_tool_call(
     tool_call: ToolCall,
     inner_thoughts: str,
@@ -90,7 +89,7 @@ def add_inner_thoughts_to_tool_call(
         return updated_tool_call
     except json.JSONDecodeError as e:
         warnings.warn(f"Failed to put inner thoughts in kwargs: {e}")
-        raise e
+        return tool_call  # Return the original tool_call without modifications
 
 
 class Message(Record):
